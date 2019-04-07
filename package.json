@@ -1,0 +1,76 @@
+{
+  "name": "sborka.loc",
+  "browserslist": [
+    "> 1%"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "latest",
+    "photoswipe": "latest",
+    "slick-carousel": "^1.8.1"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    },
+    "photoswipe": {
+      "main": [
+        "dist/photoswipe.min.js",
+        "dist/photoswipe.css",
+        "dist/photoswipe-ui-default.min.js",
+        "dist/default-skin/default-skin.css",
+        "dist/default-skin/default-skin.png",
+        "dist/default-skin/default-skin.svg",
+        "dist/default-skin/preloader.gif"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.min.js",
+        "slick/slick.css",
+        "slick/slick-theme.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.10",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
+    "css-mqpacker": "^7.0.0",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-less": "^4.0.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-remember": "^1.0.1",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-w3c-html-validator": "^1.4.3",
+    "npmfiles": "^0.1.3",
+    "postcss-csso": "^3.0.0",
+    "webpack": "^4.29.6",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "production-build": "cross-env NODE_ENV=production gulp build"
+  }
+}
