@@ -6,13 +6,16 @@
 	// grid-auto-rows: auto;
 	position: relative;
 	padding-top:80px;
+	margin-bottom: 200px;
 	.dark-field{
+		@topoffs:20px;
+		@leftoffs:15px;
 		position:absolute;
-		width: calc(100% - 30px);
-		height:calc(100% - 40px);;
+		width: calc(100% - 2*@leftoffs);
+		height:calc(100% - 2*@topoffs);;
 		// background-color: rgba(0,0,0,0.5);
-		top:20px;
-		left:15px;
+		top:@topoffs;
+		left:@leftoffs;
 		display: flex;
 		align-items: flex-end;
 		border: 3px solid white;
@@ -48,6 +51,7 @@
 		margin-bottom: 30px;
 		visibility: hidden;
 		position:relative;
+		color: white;
 
 		}
 
