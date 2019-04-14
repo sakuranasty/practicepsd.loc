@@ -197,4 +197,4 @@ exports.serve = serve
 //GLOBAL TASKS
 /****************************************************************************************************/
 task('build', parallel(html, css, js, libs, fonts, img, svgicons))
-exports.dev = series('build', parallel(watchers, serve))
+exports.dev = series('build', parallel(watchers, serve, validation))

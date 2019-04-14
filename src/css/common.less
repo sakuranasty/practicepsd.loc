@@ -23,13 +23,27 @@ li{
   padding:0 10px;
   margin:0 auto;
 }
+.br{
+	height: 1px;
+	color:@dark-gray;
+  	max-width: 1260px;
+  	margin:0 auto;
+  	padding:0 10px;
+  	box-sizing: border-box;
+  	background-clip: content-box;
+}
 .section-header{
+	@w:320px;
 	position: absolute;
 	margin: 0 auto;
 	padding:0 8%;
 	background-color:white;
-	left:35%;
 	top:-10px;
+	left: calc(50% - (@w / 2));
+	display: flex;
+	width: @w;
+	justify-content: center;
+	flex-grow: 0;
 	&:after, &:before{
 		position:absolute;
 		z-index: ;
