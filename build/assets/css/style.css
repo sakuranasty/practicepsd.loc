@@ -431,6 +431,7 @@ figure {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 li {
   list-style: none;
@@ -889,11 +890,17 @@ li {
   max-width: calc(45% - 10px);
   margin-bottom: 20px;
 }
+.feedback .item img {
+  flex-shrink: 0;
+}
 .feedback .item:nth-child(2) img {
   order: 0;
 }
 .feedback .item:nth-child(2) figcaption {
   order: 1;
+}
+.feedback .item:nth-child(3) {
+  text-align: right;
 }
 .feedback .name {
   font-family: 'Playfair Display', serif;
@@ -936,30 +943,106 @@ li {
     max-width: 60%;
   }
 }
-footer {
+footer,
+.footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) max-content;
+  padding: 100px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto)) [end-line];
   background-color: #141414;
   color: white;
 }
-footer h3 {
+footer h3,
+.footer h3 {
   color: white;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
-footer * {
+footer li,
+.footer li {
+  color: gray;
+}
+footer *,
+.footer * {
   grid-row: 1 / span 2;
+  justify-items: start;
 }
-footer .subscribe {
-  grid-column: 4 / span 1;
+footer .subscribe,
+.footer .subscribe {
+  grid-column-start: 4;
+  grid-column-end: end-line;
   grid-row: 2 / span 1;
 }
-footer .social {
+footer .subscribe form,
+.footer .subscribe form {
+  display: flex;
+  padding: 10px;
+  border: 2px solid gray;
+}
+footer .subscribe input,
+.footer .subscribe input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+}
+footer .subscribe input input::placeholder,
+.footer .subscribe input input::placeholder {
+  color: white;
+  font-style: italic;
+}
+footer .subscribe button,
+.footer .subscribe button {
+  padding: 7px 20px;
+  background-color: gray;
+  border: none;
+  color: white;
+}
+footer .social,
+.footer .social {
   grid-row: 1 / span 1;
+  grid-column-start: 4;
+  grid-column-end: end-line;
+  margin-bottom: 30px;
 }
-footer small {
+footer .social ul,
+.footer .social ul {
+  display: flex;
+}
+footer .social ul li,
+.footer .social ul li {
+  background-color: white;
+  border-radius: 50px;
+  padding: 15px 17px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: black;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+footer .social ul li:hover,
+.footer .social ul li:hover {
+  color: #feaf21;
+  border: 1px solid currentcolor;
+}
+footer .social ul .icon,
+.footer .social ul .icon {
+  fill: black;
+}
+footer .copy,
+.footer .copy {
   grid-row: 3 / span 1;
+  margin-top: 20px;
 }
-footer .payments {
+footer .copy small,
+.footer .copy small {
+  text-transform: capitalize;
+  color: gray;
+  font-size: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+footer .payments,
+.footer .payments {
   grid-row: 4 / span 1;
+  color: ;
 }
 /*# sourceMappingURL=style.css.map */
