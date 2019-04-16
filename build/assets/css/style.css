@@ -946,8 +946,7 @@ li {
 footer,
 .footer {
   display: grid;
-  padding: 100px 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto)) [end-line];
+  padding: 65px 10px;
   background-color: #141414;
   color: white;
 }
@@ -955,11 +954,13 @@ footer h3,
 .footer h3 {
   color: white;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-size: 16px;
 }
 footer li,
 .footer li {
   color: gray;
+  margin-bottom: 12px;
 }
 footer *,
 .footer * {
@@ -969,13 +970,17 @@ footer *,
 footer .subscribe,
 .footer .subscribe {
   grid-column-start: 4;
-  grid-column-end: end-line;
   grid-row: 2 / span 1;
+  max-width: 360px;
+}
+footer .subscribe h3,
+.footer .subscribe h3 {
+  margin-bottom: 50px;
 }
 footer .subscribe form,
 .footer .subscribe form {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   border: 2px solid gray;
 }
 footer .subscribe input,
@@ -983,25 +988,38 @@ footer .subscribe input,
   flex-grow: 1;
   background-color: transparent;
   border: none;
-}
-footer .subscribe input input::placeholder,
-.footer .subscribe input input::placeholder {
   color: white;
-  font-style: italic;
+  padding-left: 15px;
+}
+footer .subscribe input::placeholder,
+.footer .subscribe input::placeholder {
+  color: gray;
+  font-size: 12px;
 }
 footer .subscribe button,
 .footer .subscribe button {
-  padding: 7px 20px;
+  padding: 7px 15px;
   background-color: gray;
   border: none;
+  text-transform: uppercase;
   color: white;
+  font-size: 12px;
+}
+footer .subscribe span,
+.footer .subscribe span {
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
 }
 footer .social,
 .footer .social {
   grid-row: 1 / span 1;
   grid-column-start: 4;
-  grid-column-end: end-line;
   margin-bottom: 30px;
+}
+footer .social h3,
+.footer .social h3 {
+  margin-bottom: 50px;
 }
 footer .social ul,
 .footer .social ul {
@@ -1011,8 +1029,9 @@ footer .social ul li,
 .footer .social ul li {
   background-color: white;
   border-radius: 50px;
-  padding: 15px 17px;
-  margin-right: 10px;
+  padding: 10px 13.5px;
+  margin: 0;
+  margin-right: 20px;
   font-size: 20px;
   color: black;
   box-sizing: border-box;
@@ -1030,19 +1049,42 @@ footer .social ul .icon,
 footer .copy,
 .footer .copy {
   grid-row: 3 / span 1;
-  margin-top: 20px;
+  grid-column-end: span 4;
+  margin-top: 80px;
+  position: relative;
+  border-top: 1px solid gray;
+  color: gray;
+  padding-top: 35px;
+  font-size: 12px;
+  padding-bottom: 15px;
 }
 footer .copy small,
 .footer .copy small {
   text-transform: capitalize;
-  color: gray;
   font-size: 10px;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
+}
+footer .copy:before,
+.footer .copy:before {
+  border-top: 11px solid currentcolor;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 13px);
+  content: '';
+  z-index: 0;
 }
 footer .payments,
 .footer .payments {
   grid-row: 4 / span 1;
+  grid-column-end: span 4;
   color: ;
+}
+footer .payments li,
+.footer .payments li {
+  display: inline-block;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
