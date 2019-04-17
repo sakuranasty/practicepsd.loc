@@ -553,10 +553,10 @@ li {
   margin-left: 20px;
 }
 .promotion-block .icon {
-  font-size: 3vmax;
+  font-size: 3em;
 }
 .promotion-block .statement {
-  font-size: 1.9vmax;
+  font-size: 25px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -564,8 +564,20 @@ li {
   .promotion-block {
     margin: 0;
   }
+  .promotion-block .statement {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 864px) {
+  .promotion-block {
+    padding: 20px 10px;
+  }
+  .promotion-block:nth-child(2) {
+    padding: 20px 10px;
+  }
+  .promotion-block .statement {
+    font-size: 20px;
+  }
   .promotion-block::before,
   .promotion-block::after {
     display: none;
@@ -583,12 +595,15 @@ li {
     font-size: 2em;
   }
   .promotion-block .statement {
-    font-size: 1.5vmax;
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 5px;
   }
   .promotion-block > div {
     margin-left: 10px;
+  }
+  .promotion-block .statement-small {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -609,7 +624,7 @@ li {
     font-size: 2em;
   }
   .promotion-block .statement {
-    font-size: 1.5vmax;
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 5px;
   }
@@ -1130,5 +1145,71 @@ footer .payments li,
   .footer .social ul {
     flex-wrap: wrap;
   }
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  color: black;
+  font-size: 10px;
+}
+.top-bar .icon[aria-label="Phone number"] {
+  margin-right: 15px;
+  transform: rotate(90deg);
+  display: inline-block;
+  vertical-align: bottom;
+}
+.top-bar ul li {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 13px 0;
+  padding-left: 30px;
+}
+.top-bar ul li:not(:last-child) {
+  border-right: 1px solid black;
+  padding-right: 30px;
+}
+.top-bar ul li:hover a {
+  color: #feaf21;
+}
+.top-bar button[aria-label="menu"] {
+  border: none;
+  background: transparent;
+  display: none;
+  font-size: 12px;
+}
+@media screen and (max-width: 640px) {
+  .top-bar button[aria-label="menu"] {
+    display: block;
+    padding: 10px 0;
+  }
+  .top-bar ul {
+    display: none;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.header * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .social {
+  margin-left: auto;
+  margin-right: 45px;
+}
+.header .social li {
+  font-size: 14px;
+  display: inline-flex;
+  vertical-align: middle;
+  border-radius: 50px;
+  border: 1px solid currentcolor;
+  margin: 0 4px;
+  padding: 8px 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,76 @@
+.top-bar{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	background-color: @top-bar;
+	color:black;
+	font-size: 10px;
+	.icon[aria-label="Phone number"]{
+		margin-right: 15px;
+		transform: rotate(90deg;);
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	@padd:30px;
+	ul li{
+		display: inline-block;
+		vertical-align: middle;
+		text-transform: uppercase;
+		margin: 13px 0;
+		padding-left: @padd;
+	&:not(:last-child){
+		border-right: 1px solid black;
+		padding-right: @padd;
+	}
+	&:hover a{
+		color: @yellow;
+
+	}		
+	}
+	button[aria-label="menu"]{
+		border:none;
+		background:transparent;
+		display: none;
+		font-size: 12px
+	}
+}
+@media screen and (max-width: 640px){
+	.top-bar{
+		button[aria-label="menu"]{
+		display: block;
+		padding: 10px 0;
+	}
+	ul{
+		display: none;
+	}
+	}
+}
+.header{
+	display: flex;
+	align-items:center;
+	text-align: center;
+	justify-content:center;
+	*{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.header-nav{
+
+	}
+	.social{
+		margin-left: auto;
+		margin-right: 45px;
+		li{
+			font-size: 14px;
+			display: inline-flex;
+			vertical-align: middle;
+			border-radius:50px;
+			border: 1px solid currentcolor;
+			margin:0 4px;
+			padding:8px 10px;
+		}
+	}
+	.logo{
+		// margin:0 auto;
+	}
+}
