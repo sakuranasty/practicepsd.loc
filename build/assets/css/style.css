@@ -433,6 +433,9 @@ a {
   cursor: pointer;
   color: inherit;
 }
+a:active {
+  color: gold;
+}
 li {
   list-style: none;
 }
@@ -883,6 +886,9 @@ li {
   content: '';
   z-index: 0;
 }
+.feedback .section-header {
+  top: -87px;
+}
 .feedback .item {
   font-size: initial;
   display: inline-flex;
@@ -943,6 +949,9 @@ li {
     max-width: 60%;
   }
 }
+.special {
+  margin-bottom: 80px;
+}
 footer,
 .footer {
   display: grid;
@@ -961,6 +970,11 @@ footer li,
 .footer li {
   color: gray;
   margin-bottom: 12px;
+  margin-right: 10px;
+}
+footer li:hover,
+.footer li:hover {
+  color: white;
 }
 footer *,
 .footer * {
@@ -1086,5 +1100,35 @@ footer .payments li,
 .footer .payments li {
   display: inline-block;
   vertical-align: middle;
+}
+@media screen and (max-width: 864px) {
+  footer .information,
+  .footer .information {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  footer .shops,
+  .footer .shops {
+    display: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  footer .service,
+  .footer .service {
+    display: none;
+  }
+  footer .social,
+  .footer .social,
+  footer .subscribe,
+  .footer .subscribe {
+    grid-column: 1 / span 4;
+    justify-items: stretch;
+    margin-right: auto;
+  }
+  footer .social ul,
+  .footer .social ul {
+    flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */
