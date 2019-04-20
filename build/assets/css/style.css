@@ -634,9 +634,12 @@ li {
   }
 }
 @media screen and (max-width: 414px) {
+  .promotion-block {
+    padding: 10px 0;
+  }
   .promotion-block:nth-child(2) {
     justify-content: center;
-    padding: 20px 10px;
+    padding: 10px 0px;
   }
   .promotion-block:nth-child(2n+1) {
     justify-content: center;
@@ -648,9 +651,12 @@ li {
     font-size: 3em;
   }
   .promotion-block .statement {
-    font-size: 1.7vmax;
+    font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 5px;
+  }
+  .promotion-block > div {
+    width: 50%;
   }
 }
 .hand-picked {
@@ -759,8 +765,7 @@ li {
 }
 @media screen and (max-width: 540px) {
   .hand-picked {
-    grid-template-columns: auto auto;
-    grid-auto-columns: auto;
+    grid-template-columns: auto;
   }
   .hand-picked .poster-img:nth-child(n) {
     margin-right: 0px;
@@ -1110,12 +1115,21 @@ footer .payments,
 .footer .payments {
   grid-row: 4 / span 1;
   grid-column-end: span 4;
-  color: ;
 }
 footer .payments li,
 .footer .payments li {
+  font-size: 30px;
   display: inline-block;
   vertical-align: middle;
+  margin-left: 8px;
+}
+footer .payments .icon,
+.footer .payments .icon {
+  filter: invert(1);
+}
+footer .payments .icon use,
+.footer .payments .icon use {
+  background-color: gray;
 }
 @media screen and (max-width: 864px) {
   footer .information,
@@ -1175,19 +1189,40 @@ footer .payments li,
 .top-bar ul li:hover a {
   color: #feaf21;
 }
-.top-bar button[aria-label="menu"] {
+.top-bar #tbMenu {
   border: none;
   background: transparent;
   display: none;
   font-size: 12px;
 }
 @media screen and (max-width: 640px) {
-  .top-bar button[aria-label="menu"] {
+  .top-bar {
+    position: relative;
+    font-size: 16px;
+  }
+  .top-bar #tbMenu {
     display: block;
     padding: 10px 0;
+    font-size: 20px;
   }
   .top-bar ul {
+    position: absolute;
     display: none;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: inherit;
+  }
+  .top-bar ul li {
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px 30px;
+    margin: 0;
+  }
+  .top-bar ul li a {
+    display: block;
+    text-align: right;
   }
 }
 .header {
@@ -1197,15 +1232,17 @@ footer .payments li,
   padding-top: 35px;
 }
 .header .header-nav {
-  margin-right: auto;
   flex: 0 0 auto;
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 18px;
+  margin-top: 10px;
 }
 .header .header-nav ul li {
   display: inline-block;
   vertical-align: middle;
+}
+.header .header-nav ul a {
   padding: 5px 20px 5px 0;
   font-weight: 400;
 }
@@ -1218,12 +1255,16 @@ footer .payments li,
   vertical-align: middle;
   border-radius: 50px;
   border: 1px solid currentcolor;
-  margin: 0 4px;
+  margin: 10px 4px 0 4px;
   padding: 8px 10px;
 }
 .header .logo {
   flex-grow: 1;
   text-align: center;
+  margin-bottom: 40px;
+}
+.header .logo a {
+  display: block;
 }
 .header .select select {
   background-color: black;
@@ -1232,6 +1273,11 @@ footer .payments li,
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 400;
+  margin: 10px 0 0;
+  border: none;
+}
+.header #hMenu {
+  display: none;
 }
 @media screen and (max-width: 980px) {
   .header {
@@ -1244,12 +1290,20 @@ footer .payments li,
     margin: 10px auto 0;
     font-size: 25px;
     border-top: 1px solid #d9be8f;
+    width: 100%;
+    text-align: center;
+  }
+  .header .header-nav ul a {
+    padding: 10px 20px;
+    display: block;
+    border: 1px solid #d9be8f;
   }
   .header .header-nav ul li {
-    padding: 10px 20px;
+    margin: 0 10px;
   }
   .header .logo {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1266,11 +1320,46 @@ footer .payments li,
     flex: 1 0 320px;
     text-align: center;
   }
-  .header .header-nav ul li {
+  .header .header-nav ul li a {
     display: block;
   }
-  .social {
+  .header .header-nav ul li {
+    margin: 0;
+  }
+  .header .social {
     display: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  .header {
+    justify-content: center;
+  }
+  .header .header-nav {
+    order: 5;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .header .header-nav ul li a {
+    display: block;
+  }
+  .header .header-nav ul li {
+    margin: 0;
+    width: 100%;
+  }
+  .header #hMenu {
+    order: 4;
+    width: 100%;
+    background: transparent;
+    padding: 10px 0;
+    border: 1px solid #d9be8f;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 400;
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
