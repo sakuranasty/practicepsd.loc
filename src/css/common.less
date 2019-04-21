@@ -42,12 +42,12 @@ li{
   	border:0;
 }
 .section-header{
-	@w:320px;
+	@w:340px;
 	position: absolute;
 	margin: 0 auto;
 	text-align: center;
 	background-color:white;
-	top:-10px;
+	top:-18px;
 	left: calc(50% - (@w / 2));
 	display: flex;
 	width: @w;
@@ -56,21 +56,27 @@ li{
 	z-index: 4;
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
+	font-size: 30px;
 	&:after, &:before{
 		position:absolute;
 		z-index: ;
-		top:0;
+		top:11px;
 		content: '';
-		width: 1em;
-		height: 1em;
+		width: 0.5em;
+		height: 0.5em;
 		background-color: @sand;
 		transform: rotate(45deg);
 
 	}
 	&:after{
-		left:2em;
+		left:0.5em;
 	}
 	 &:before{
-	 	right: 2em;
+	 	right: 0.5em;
 	 }
+}
+.shop-btn{
+	background-color:@orange;
+	text-transform: uppercase;
+	color: white;
 }

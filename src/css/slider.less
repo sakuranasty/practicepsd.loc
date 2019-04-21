@@ -1,0 +1,151 @@
+.sliderMain{
+	background-color: #8b8683;
+	position: relative;
+	margin-bottom: 65px;
+	margin-top: 50px;
+	&:before{
+		border-top:50px solid white;
+		border-left:200px solid transparent;
+		border-right:200px solid transparent;
+		position:absolute;
+		top:0;
+		left:calc(50% - 200px);
+		content: '';
+		z-index: 1;
+	}
+	.content{
+		height: auto;
+		width: 100%;
+	}
+	img{
+		position:relative;
+		top:0;
+		left:0;
+		z-index: -0;
+		width: 100%;
+
+	}
+	.promo{
+		border:1px solid white;
+		outline: white solid 2px;
+		outline-offset: 5px;
+		z-index: 1;
+		position:absolute;
+		margin: 145px auto 0;
+		width: fit-content;
+		padding:15px;
+		width: 224px;
+		top:0;
+		left:calc(50% - 112px);
+		*{
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+	.mid{
+		color: white;
+		margin: 10px 50px 20px;
+		font-size: 20px;
+	}
+	.sale{
+		color:black;
+		font-size:60px;
+		font-weight:bold;
+		margin: 0 auto;
+		margin-bottom: 7px;
+	}
+	.upto{
+		font-size: 20px;
+		overflow: hidden;
+		text-align: center;
+		color: white;
+		padding:10px 0px 0;
+		margin-bottom: -1px;
+		&:before,&:after{
+			content: "";
+			width: 15%;
+			background-color:white;
+			height: 1px;
+			display: inline-block;
+			vertical-align: middle;
+			position:relative;
+			top:-2px;
+		}
+		&:before{
+			// margin-right:-100%;
+			right: 12px; 
+
+		}
+		&:after{
+			left: 12px;
+		}
+	}
+	.pers{
+		font-size: 30px;
+		color: black;
+		font-weight: bold;
+		word-spacing: 10px;
+		padding:20px 10px 0;
+		position:relative;
+		&:before,&:after{
+			position:absolute;
+			content: "";
+			width: 26%;
+			background-color:white;
+			height: 1px;
+			display: inline-block;
+			vertical-align: middle;
+			top:-2px;
+			}
+		&:before{
+			// margin-right:-100%;
+			right: 13px; 
+
+		}
+		&:after{
+			left: 13px;
+		}
+	}
+	.shop-btn{
+		width: 224px;
+		position:absolute;
+		z-index: 1;
+		padding:10px 25px;
+		margin: 75px auto;
+		display: block;
+		width: fit-content;
+		font-size: 25px;
+		top:30%;
+		left:calc(50% - 114px);
+	}
+}
+.slick-dots{
+	bottom:25px;
+	li{
+		transform: rotate(45deg);
+		background-color: white;
+		opacity: 0.6;
+	}
+	.slick-active{
+		background-color:black;
+		opacity: 1;
+	}
+}
+.slick-list{
+	overflow: hidden;
+}
+.slick-next{
+	right: 0;
+}
+.slick-prev{
+	left:0;
+}
+.slick-arrow{
+	z-index: 1;
+}
+@media screen and (max-width: 768px) {
+	.sliderMain{
+	&:before{
+		display: none;
+	}
+}}
