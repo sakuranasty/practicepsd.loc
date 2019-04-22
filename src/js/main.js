@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('.sliderMain').slick({
     accessibility: true,
     adaptiveHeight: true,
-    autoplay:true,
+    autoplay:false,
     draggable:true,
     infinite:true,
     arrows:true,
