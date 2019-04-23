@@ -492,6 +492,20 @@ li {
   text-transform: uppercase;
   color: white;
 }
+#scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  z-index: 10;
+  border: none;
+  padding: 15PX 10px 10px;
+  line-height: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
 .promotion-blocks {
   display: flex;
   flex-wrap: wrap;
@@ -1205,7 +1219,7 @@ footer .payments .icon use,
   }
   .top-bar #tbMenu {
     display: block;
-    padding: 10px 0;
+    padding: 10px ;
     font-size: 20px;
   }
   .top-bar ul {
@@ -1351,6 +1365,9 @@ footer .payments .icon use,
     margin: 0;
     width: 100%;
   }
+  .header .logo {
+    text-align: center;
+  }
   .header #hMenu {
     order: 4;
     width: 100%;
@@ -1368,8 +1385,7 @@ footer .payments .icon use,
 .sliderMain {
   background-color: #8b8683;
   position: relative;
-  margin-bottom: 65px;
-  margin-top: 50px;
+  margin: 50px auto 65px;
 }
 .sliderMain:before {
   border-top: 50px solid white;
@@ -1400,7 +1416,7 @@ footer .payments .icon use,
   position: absolute;
   padding: 15px;
   width: 260px;
-  top: 25%;
+  top: 20%;
   left: calc(50% - 130px);
 }
 .sliderMain .promo * {
@@ -1478,16 +1494,25 @@ footer .payments .icon use,
   padding: 10px 25px;
   display: block;
   font-size: 25px;
-  bottom: 15%;
+  bottom: 70px;
   left: calc(50% - 114px);
+}
+.slider-wrap {
+  max-width: 1280px;
+  margin: 50px auto 65px;
 }
 .slick-dots {
   bottom: 25px;
 }
 .slick-dots li {
+  margin: 0 10px;
   transform: rotate(45deg);
   background-color: white;
   opacity: 0.6;
+  color: white;
+}
+.slick-dots li button:before {
+  font-size: 0;
 }
 .slick-dots .slick-active {
   background-color: black;
@@ -1505,31 +1530,87 @@ footer .payments .icon use,
 .slick-arrow {
   z-index: 1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .sliderMain:before {
     display: none;
+  }
+  .sliderMain .promo {
+    top: 15%;
+  }
+  .sliderMain .pers {
+    margin-bottom: 6px;
   }
 }
 @media screen and (max-width: 864px) {
   .sliderMain:before {
     display: none;
   }
+  .sliderMain img {
+    width: 100%;
+  }
   .sliderMain .promo {
-    top: 10%;
-    width: 25%;
-    left: calc(50% - 12.5%);
+    top: 12%;
+    width: 310px;
+    left: calc(50% - 155px);
   }
   .sliderMain .pesr {
     margin-bottom: 0;
-  }
-  .sliderMain .upto {
-    display: none;
   }
   .sliderMain .mid {
     margin: 5px auto;
   }
   .sliderMain .shop-btn {
-    bottom: 70px;
+    bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sliderMain:before {
+    display: none;
+  }
+  .sliderMain img {
+    width: 170%;
+  }
+  .sliderMain .sale {
+    color: white;
+  }
+  .sliderMain .pesr {
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .sliderMain img {
+    width: 180%;
+  }
+  .sliderMain .promo {
+    top: 7%;
+    width: 310px;
+    left: calc(50% - 155px);
+  }
+  .sliderMain .mid {
+    font-size: 20px;
+  }
+  .sliderMain .sale {
+    color: white;
+    margin-bottom: 0;
+    font-size: 50px;
+  }
+  .sliderMain .pers {
+    margin-bottom: 0;
+    padding: 0 0 0;
+  }
+  .sliderMain .upto {
+    padding-top: 0;
+  }
+  .sliderMain .mid {
+    margin: 3px auto;
+    margin-bottom: 0;
+  }
+  .sliderMain .shop-btn {
+    bottom: 50px;
+  }
+  .slick-dots {
+    bottom: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

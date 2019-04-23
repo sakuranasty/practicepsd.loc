@@ -4,6 +4,7 @@
 @dark-gray:#b2b2b2;
 @yellow:#feaf21;
 @footer:#141414;
+@wrap-width:1280px;
 *{
 	margin:0;
 	padding:0;
@@ -27,7 +28,7 @@ li{
   list-style: none;
 }
 .wrap{
-  max-width: 1280px;
+  max-width: @wrap-width;
   padding:0 10px;
   margin:0 auto;
 }
@@ -79,4 +80,18 @@ li{
 	background-color:@orange;
 	text-transform: uppercase;
 	color: white;
+}
+#scroll{
+	position:fixed;
+	bottom:20px;
+	right: 20px;
+	background-color:black;
+	color: white;
+	font-size: 25px;
+	z-index: 10;
+	border:none;
+	padding:15PX 10px 10px;
+	line-height: 10px;
+	text-align: center;
+	vertical-align: middle;
 }

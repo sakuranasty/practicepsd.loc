@@ -1,8 +1,7 @@
 .sliderMain{
 	background-color: #8b8683;
 	position: relative;
-	margin-bottom: 65px;
-	margin-top: 50px;
+	margin: 50px auto 65px;
 	&:before{
 		border-top:50px solid white;
 		border-left:200px solid transparent;
@@ -33,7 +32,7 @@
 		position:absolute;
 		padding:15px;
 		width: 260px;
-		top:25%;
+		top:20%;
 		left:calc(50% - 130px);
 		*{
 			text-transform: uppercase;
@@ -113,16 +112,26 @@
 		padding:10px 25px;
 		display: block;
 		font-size: 25px;
-		bottom: 15%;
+		bottom: 70px;
 		left:calc(50% - 114px);
 	}
+}
+.slider-wrap{
+	max-width: @wrap-width;
+	margin: 50px auto 65px;
+
 }
 .slick-dots{
 	bottom:25px;
 	li{
+		margin: 0 10px;
 		transform: rotate(45deg);
 		background-color: white;
 		opacity: 0.6;
+		color: white;
+		button:before{
+			font-size: 0;
+		}
 	}
 	.slick-active{
 		background-color:black;
@@ -141,36 +150,106 @@
 .slick-arrow{
 	z-index: 1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px){
 	.sliderMain{
-	&:before{
-		display: none;
+		&:before{
+			display: none;
+		}
+		
+	.promo{
+		top:15%;
 	}
-}}
+	.pers{
+		margin-bottom:6px;
+	}
+}
+}
 @media screen and (max-width: 864px){
 	.sliderMain{
 		&:before{
 			display: none;
 		}
+		img{
+			width: 100%;
+		}
 	.promo{
-		top:10%;
-		width: 25%;
-		left:calc(50% - 12.5%);
+		top:12%;
+		width: 310px;
+		left:calc(50% - 155px);
 
 }
 	.pesr{
 		margin-bottom: 0;
 	}
 	.upto{
-		display: none;
+		// display: none;
 	}
 	.mid{
 		margin: 5px auto;
 
 	}
 	.shop-btn{
-		bottom:70px;
+		bottom:60px;
 
 	}
 }
+}
+@media screen and (max-width: 768px) {
+	.sliderMain{
+	&:before{
+		display: none;
+	}
+	img{
+		width: 170%;
+	}
+	.sale{
+		color:white;
+	}
+	.mid{
+		// display: none;
+	}
+	.pesr{
+		margin: 0 auto;
+		font-size: 20px;
+	}
+}}
+@media screen and (max-width: 414px) {
+	.sliderMain{
+		img{
+			width: 180%;
+		}
+		.promo{
+		top:7%;
+		width: 310px;
+		left:calc(50% - 155px);
+
+		}
+	.mid{
+	font-size: 20px;
+	}
+	.sale{
+	color:white;
+	margin-bottom: 0;
+	font-size: 50px;
+	}
+	.pers{
+		margin-bottom: 0;
+		padding:0 0 0;
+	}
+	.upto{
+		// display: none;
+		padding-top: 0;
+	}
+	.mid{
+		margin: 3px auto;
+		margin-bottom: 0;
+
+	}
+	.shop-btn{
+		bottom:50px;
+
+	}
+}
+.slick-dots{
+	bottom:15px;}
 }
