@@ -1366,9 +1366,8 @@ footer .payments li,
   }
   .header .header-nav {
     order: 5;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
     font-size: 25px;
-    border-top: 1px solid #d9be8f;
     width: 100%;
     text-align: center;
   }
@@ -1393,7 +1392,7 @@ footer .payments li,
   }
   .header .header-nav {
     order: 5;
-    margin: 10px auto 0;
+    margin: 40px auto 0;
     font-size: 25px;
     border-top: none;
     flex: 1 0 320px;
@@ -1415,7 +1414,7 @@ footer .payments li,
   }
   .header .header-nav {
     order: 5;
-    margin: 10px 0;
+    margin: 0px 0;
     width: 100%;
     text-align: center;
     display: none;
@@ -1439,7 +1438,7 @@ footer .payments li,
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
     font-weight: 400;
     display: block;
   }
@@ -1605,6 +1604,9 @@ footer .payments li,
   }
 }
 @media screen and (max-width: 864px) {
+  .sliderMain {
+    margin-top: 20px;
+  }
   .sliderMain:before {
     display: none;
   }
