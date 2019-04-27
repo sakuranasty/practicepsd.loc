@@ -12,7 +12,7 @@
     ]
   },
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "normalize.css": "latest",
     "photoswipe": "latest",
     "slick-carousel": "^1.8.1"
@@ -41,17 +41,17 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
-    "autoprefixer": "^9.4.10",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "cross-env": "^5.2.0",
     "css-mqpacker": "^7.0.0",
-    "del": "^4.0.0",
-    "gulp": "^4.0.0",
+    "del": "^4.1.0",
+    "gulp": "^4.0.1",
     "gulp-cached": "^1.1.1",
     "gulp-debug": "^4.0.0",
     "gulp-flatten": "^0.4.0",
@@ -67,7 +67,7 @@
     "gulp-w3c-html-validator": "^1.4.3",
     "npmfiles": "^0.1.3",
     "postcss-csso": "^3.0.0",
-    "webpack": "^4.29.6",
+    "webpack": "^4.30.0",
     "webpack-stream": "^5.2.1"
   },
   "scripts": {

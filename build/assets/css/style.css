@@ -826,7 +826,7 @@ li {
   text-align: center;
   position: absolute;
   bottom: 0;
-  padding: 10px 0 10px;
+  padding: 13px 0 10px;
   left: calc(50% - 50px);
   box-sizing: border-box;
   font-size: 12px;
@@ -946,10 +946,13 @@ li {
 .feedback .item:nth-child(3) {
   text-align: right;
 }
+.feedback .declare,
 .feedback .name {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: black;
+}
+.feedback .name {
   font-size: 20px;
   margin-top: 15px;
   font-weight: 700;
@@ -1096,10 +1099,6 @@ footer .social ul li:hover,
   color: #feaf21;
   border: 1px solid currentcolor;
 }
-footer .social ul .icon,
-.footer .social ul .icon {
-  fill: black;
-}
 footer .copy,
 .footer .copy {
   grid-row: 3 / span 1;
@@ -1142,42 +1141,103 @@ footer .payments li,
   vertical-align: middle;
   margin-left: 8px;
 }
-footer .payments .icon,
-.footer .payments .icon {
-  filter: invert(1);
-}
-footer .payments .icon use,
-.footer .payments .icon use {
-  background-color: gray;
-}
 @media screen and (max-width: 864px) {
-  footer .information,
-  .footer .information {
-    display: none;
+  footer .subscribe,
+  .footer .subscribe {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+    max-width: 360px;
   }
-}
-@media screen and (max-width: 640px) {
-  footer .shops,
-  .footer .shops {
-    display: none;
+  footer .social,
+  .footer .social {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+    margin-bottom: 30px;
+  }
+  footer .copy,
+  .footer .copy {
+    grid-row: 5 / span 1;
+  }
+  footer .payments,
+  .footer .payments {
+    grid-row: 6 / span 1;
   }
 }
 @media screen and (max-width: 540px) {
   footer .service,
-  .footer .service {
+  .footer .service,
+  footer .information,
+  .footer .information,
+  footer .shops,
+  .footer .shops,
+  footer .copy,
+  .footer .copy,
+  footer .social,
+  .footer .social,
+  footer .subscribe,
+  .footer .subscribe,
+  footer .payments,
+  .footer .payments {
+    grid-row: auto / span 1;
+    grid-column: 1 / span 4;
+  }
+  footer .service,
+  .footer .service,
+  footer .information,
+  .footer .information,
+  footer .shops,
+  .footer .shops {
+    position: relative;
+  }
+  footer .service ul,
+  .footer .service ul,
+  footer .information ul,
+  .footer .information ul,
+  footer .shops ul,
+  .footer .shops ul {
     display: none;
+  }
+  footer .service h3:hover,
+  .footer .service h3:hover,
+  footer .information h3:hover,
+  .footer .information h3:hover,
+  footer .shops h3:hover,
+  .footer .shops h3:hover {
+    color: #d9be8f;
+  }
+  footer .service h3:after,
+  .footer .service h3:after,
+  footer .information h3:after,
+  .footer .information h3:after,
+  footer .shops h3:after,
+  .footer .shops h3:after {
+    content: "+";
+    border: 1px solid currentcolor;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding: 2px 9px;
+    font-size: 20px;
+    font-weight: bold;
+    color: inherit;
   }
   footer .social,
   .footer .social,
   footer .subscribe,
   .footer .subscribe {
-    grid-column: 1 / span 4;
     justify-items: stretch;
     margin-right: auto;
+  }
+  footer .social,
+  .footer .social {
+    margin-top: 20px;
   }
   footer .social ul,
   .footer .social ul {
     flex-wrap: wrap;
+  }
+  footer .social ul li,
+  .footer .social ul li {
+    margin: 0 10px 10px 0;
   }
 }
 .top-bar {
@@ -1255,7 +1315,7 @@ footer .payments .icon use,
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 .header .header-nav ul li {
   display: inline-block;
@@ -1280,7 +1340,7 @@ footer .payments .icon use,
 .header .logo {
   flex-grow: 1;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .header .logo a {
   display: block;
@@ -1387,7 +1447,8 @@ footer .payments .icon use,
 .sliderMain {
   background-color: #8b8683;
   position: relative;
-  margin: 50px auto 65px;
+  margin: 0px auto 65px;
+  max-width: 1920px;
 }
 .sliderMain:before {
   border-top: 50px solid white;
