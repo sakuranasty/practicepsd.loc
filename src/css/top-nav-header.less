@@ -5,11 +5,15 @@
 	background-color: @top-bar;
 	color:black;
 	font-size: 10px;
+	&>a:hover{
+			color:@yellow;
+	}
 	.icon[aria-label="Phone number"]{
 		margin-right: 15px;
 		transform: rotate(90deg;);
 		display: inline-block;
 		vertical-align: bottom;
+		
 	}
 	@padd:30px;
 	ul li{
@@ -75,6 +79,9 @@
 		ul li{
 			display: inline-block;
 			vertical-align: middle;
+			&:hover a{
+				color:@yellow;
+			}
 	}
 	ul a{
 			padding:5px 20px 5px 0;
@@ -91,6 +98,9 @@
 			border: 1px solid currentcolor;
 			margin:10px 4px 0 4px;
 			padding:8px 10px;
+			&:hover{
+				color:@yellow ;
+			}
 		}
 	}
 	.logo{
