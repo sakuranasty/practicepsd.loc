@@ -1343,18 +1343,20 @@ footer .payments li,
 }
 .header .social {
   margin-right: 45px;
+  color: #d9be8f;
 }
 .header .social li {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   display: inline-block;
   vertical-align: middle;
   border-radius: 50px;
-  border: 1px solid currentcolor;
+  border: 2px solid currentcolor;
   margin: 10px 4px 0 4px;
   padding: 8px 10px;
 }
 .header .social li:hover {
-  color: #feaf21;
+  color: black;
 }
 .header .logo {
   flex-grow: 1;
@@ -1362,7 +1364,7 @@ footer .payments li,
   margin-bottom: 20px;
 }
 .header .logo a {
-  display: block;
+  display: inline-block;
 }
 .header .select select {
   background-color: black;
@@ -1373,6 +1375,16 @@ footer .payments li,
   font-weight: 400;
   margin: 10px 0 0;
   border: none;
+  max-width: 100px;
+  cursor: pointer;
+}
+.header .select select option {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.header .select select option::selection {
+  cursor: pointer;
 }
 .header #hMenu {
   display: none;
@@ -1477,6 +1489,9 @@ footer .payments li,
   left: calc(50% - 200px);
   content: '';
   z-index: 1;
+}
+.sliderMain:selection {
+  background-color: #d9be8f;
 }
 .sliderMain .content {
   height: auto;
