@@ -6,6 +6,10 @@ function removeDisplay(){
   	$(this).stop(true)
 	// console.log(1)
 }
+function toggleinteractive(target,state2){
+    $(target).toggleClass(state2)
+};
+  let mq=window.matchMedia('(max-width: 540px)')
 $(document).ready(function(){
   $('.sliderMain').slick({
     accessibility: true,
@@ -33,24 +37,21 @@ $(document).ready(function(){
   $('#scroll').click(function(){
   	$(window).scrollTop(0)
   	});
+  if(mq.matches){
   $('.shops h3').click(function(){
   	$('.shops ul').slideToggle(400,removeDisplay)
-  	});
-  $('.shops h3').focusout(function(){
-  	$('.shops ul').slideUp(400,removeDisplay)
+    $(this).toggleClass('catheadhide')
   	});
   $('.information h3').click(function(){
   	$('.information ul').slideToggle(400,removeDisplay)
+    toggleinteractive(this,'catheadhide')
   	});
-  $('.information h3').focusout(function(){
-  	$('.information ul').slideUp(400,removeDisplay)
-  	});
-  $('.service h3').click(function(){
+   $('.service h3').click(function(){
   	$('.service ul').slideToggle(400,removeDisplay)
+    toggleinteractive(this,'catheadhide')
   	});
-  $('.service h3').focusout(function(){
-  	$('.service ul').slideUp(400,removeDisplay)
-  	});
+ }
+ 
 
 
 });
