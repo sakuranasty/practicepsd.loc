@@ -50,7 +50,36 @@ $(document).ready(function(){
   	$('.service ul').slideToggle(400,removeDisplay)
     toggleinteractive(this,'catheadhide')
   	});
- }
+ };
+$(window).resize(function(){
+  console.log("resize")
+  if(!(mq.matches)){
+  $('.shops h3').unbind('click')
+  $('.shops h3').removeAttr('class')
+  $('.shops ul').removeAttr('style')
+  $('.information h3').unbind('click')
+  $('.information h3').removeAttr('class')
+  $('.information ul').removeAttr('style')
+  $('.service h3').unbind('click')
+  $('.service h3').removeAttr('class')
+  $('.service ul').removeAttr('style')
+}else{
+  $('.shops h3').click(function(){
+    $('.shops ul').slideToggle(400,removeDisplay)
+    $(this).toggleClass('catheadhide')
+    })
+    $('.information h3').click(function(){
+    $('.information ul').slideToggle(400,removeDisplay)
+    toggleinteractive(this,'catheadhide')
+    })
+    $('.service h3').click(function(){
+    $('.service ul').slideToggle(400,removeDisplay)
+    toggleinteractive(this,'catheadhide')
+    })
+}
+})
+
+ 
  
 
 
